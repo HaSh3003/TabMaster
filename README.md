@@ -33,7 +33,7 @@
 1. **Clone the Repository**
 
 ```bash
-git clone https://github.com/HeshamYasser/TabMaster.git
+git clone https://github.com/HaSh3003/TabMaster
 cd TabMaster
 ```
 
