@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🚀 TabMaster</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <div class="container text-center">
+      <h1 class="mb-4 text-primary">
+        <i class="fa-solid fa-layer-group"></i> Tab Master
+      </h1>
+
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          id="groupName"
+          class="form-control"
+          placeholder="اسم الجروب"
+        />
+        <button class="btn btn-success" onclick="addGroup()">
+          <i class="fa-solid fa-plus"></i> إضافة جروب
+        </button>
+      </div>
+
+      <h2 class="mb-3">📂 الجروبات:</h2>
+      <div id="groupsContainer" class="row"></div>
+    </div>
+
+    <div class="modal fade" id="addSiteModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">إضافة موقع جديد</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <input type="hidden" id="currentGroup" />
+            <div class="mb-3">
+              <label class="form-label">اسم الموقع</label>
+              <input type="text" id="siteName" class="form-control" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">رابط الموقع</label>
+              <input type="text" id="siteUrl" class="form-control" />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              إلغاء
+            </button>
+            <button type="button" class="btn btn-success" onclick="saveSite()">
+              إضافة
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 
+ MIT License
+ Copyright (c) 2025 Hesham Yasser
+     -->
+  </body>
+</html>

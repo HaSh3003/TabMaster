@@ -1,0 +1,14 @@
+body {
+  font-family: "Tajawal", sans-serif;
+  background-color: #f8f9fa;
+}
+.container {
+  max-width: 600px;
+  margin-top: 50px;
+}
+.group-card {
+  transition: 0.3s;
+}
+.group-card:hover {
+  transform: scale(1.05);
+}
