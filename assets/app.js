@@ -45,7 +45,7 @@ function displayGroups() {
   container.innerHTML = "";
   for (let group in groups) {
     let div = document.createElement("div");
-    div.classList.add("col-md-6", "mb-3");
+    div.classList.add("col-md-12", "mb-3");
     div.innerHTML = `
             <div class="card group-card shadow-sm">
                 <div class="card-body text-center">
