@@ -82,14 +82,14 @@ function displayGroups() {
 function openTabs(group) {
   if (!groups[group] || groups[group].length === 0) {
     Swal.fire({
-      title: "لا يوجد مواقع في هذه المجموعه",
-      text: "يجب عليك اولا اضافة مواقع الكترونية لفتحها اثناء تشغيل المجموعه!",
+      title: "لا يوجد مواقع في هذه المجموعة",
+      text: "يجب عليك أولاً إضافة مواقع إلكترونية لفتحها أثناء تشغيل المجموعة!",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      cancelButtonText: "الغاء",
-      confirmButtonText: "اضافة موقع جديد",
+      cancelButtonText: "إلغاء",
+      confirmButtonText: "إضافة موقع جديد",
     }).then((result) => {
       if (result.isConfirmed) {
         openAddSiteModal(group);
@@ -99,7 +99,11 @@ function openTabs(group) {
   }
 
   groups[group].forEach((site) => {
-    window.open(site, "_blank");
+    if (typeof site === "object" && site.url) {
+      window.open(site.url, "_blank");
+    } else {
+      console.error("Invalid site object:", site);
+    }
   });
 }
 
